@@ -57,7 +57,7 @@ const FacultyList = () => {
                 <img alt='' style={{width:'20%'}} src={faculty.imageUrl}/>
                 <p> {faculty.facultyName} {faculty.phoneNumber}</p>
                 <button onClick={()=>{deleteData(faculty.id)}} >delete</button>
-                <button onClick={()=>{navigate('/updateFaculty',{state:faculty})}}>Update</button>
+                <button onClick={()=>{navigate('/dashboard/updateFaculty',{state:faculty})}}>Update</button>
               </div>
         )
     

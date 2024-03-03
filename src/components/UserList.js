@@ -45,7 +45,7 @@ const UserList = () => {
                     <img alt='' style={{width:'20%'}} src={value.imageUrl}/>
                     <p>{value.userName} {value.phoneNumber}</p>
                     <button onClick={()=>{deleteData(key)}}>delete</button>
-                    <button onClick={()=>{navigate('/updateUser',{state:[key,value]})}} >Update</button>
+                    <button onClick={()=>{navigate('/dashboard/updateUser',{state:[key,value]})}} >Update</button>
                </div>
             )
         })}

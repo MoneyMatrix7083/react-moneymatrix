@@ -9,10 +9,15 @@ import UpdateUser from './components/UpdateUser';
 import AddFaculty from './components/AddFaculty';
 import FacultyList from './components/FacultyList';
 import UpdateFaculty from './components/UpdateFaculty';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import {isLogin} from '../src/components/CheckAuth'
 
 //router
 const myRouter = createBrowserRouter([
-  {path:'',Component:Dashboard,children:[
+  {path:'signup',Component:Signup},
+  {path:'login',Component:Login},
+  {path:'dashboard', loader:isLogin, Component:Dashboard,children:[
     {path:'',Component:UserList},
     {path:'addUser',Component:AddUser},
     {path:'userList',Component:UserList},

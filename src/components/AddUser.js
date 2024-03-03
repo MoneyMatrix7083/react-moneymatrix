@@ -31,7 +31,7 @@ const AddUser = () => {
         phoneNumber:phone,
         imageUrl: imageUrl
     }).then(res=>{ 
-        navigate('/userList')
+        navigate('/dashboard/userList')
     }).catch(e=>{
         console.log(e);
     })

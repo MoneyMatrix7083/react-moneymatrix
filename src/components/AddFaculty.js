@@ -55,7 +55,7 @@ const imageUrl = await getDownloadURL(myRef)
 const docRef2 = doc(db,'History',id)
 try {
        await updateDoc(docRef2,{ imageUrl:imageUrl});
-       navigate('/facultyList');
+       navigate('/dashboard/facultyList');
    } catch (error) {
        
        console.log(error);

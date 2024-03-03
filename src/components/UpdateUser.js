@@ -34,7 +34,7 @@ const UpdateUser = () => {
 
    const userRef = ref(db,'users/'+location.state[0])
    update(userRef,{userName:name,phoneNumber:phone,imageUrl: imageUrl}).then(res=>{
-    navigate('/userList') 
+    navigate('/dashboard/userList') 
    }).catch(e=>{
     console.log(e);
    })
@@ -42,7 +42,7 @@ const UpdateUser = () => {
     const db = getDatabase(app)
     const userRef = ref(db,'users/'+location.state[0])
     update(userRef,{userName:name,phoneNumber:phone}).then(res=>{
-    navigate('/userList') 
+    navigate('/dashboard/userList') 
    }).catch(e=>{
     console.log(e);
    })

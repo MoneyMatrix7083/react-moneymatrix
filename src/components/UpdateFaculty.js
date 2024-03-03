@@ -38,7 +38,7 @@ const UpdateFaculty = () => {
         const docRef = doc(db,'History',location.state.id)
         try {
             await updateDoc(docRef,{facultyName:name, phoneNumber:phone, imageUrl:imageUrl});
-            navigate('/facultyList');
+            navigate('/dashboard/facultyList');
         } catch (error) {
             
             console.log(error);
@@ -51,7 +51,7 @@ const UpdateFaculty = () => {
     try {
         
         await updateDoc(docRef,{facultyName:name, phoneNumber:phone});
-        navigate('/facultyList');
+        navigate('/dashboard/facultyList');
     } catch (error) {
         
         console.log(error);
